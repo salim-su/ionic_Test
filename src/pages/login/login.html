@@ -7,12 +7,36 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>login</ion-title>
+    <ion-title>登录</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+
+   <ion-list>
+        <ion-item>
+          <ion-label fixed>账户:</ion-label>
+          <ion-input type="text" [(ngModel)]='userinfo.username' placeholder='手机号/账户'></ion-input>
+        </ion-item>
+  
+        <ion-item>
+            <ion-label fixed>密码:</ion-label>
+            <ion-input type="password"  [(ngModel)]='userinfo.password' placeholder='请输入密码'></ion-input>
+         </ion-item>
+
+         <ion-item no-lines class="list_end">
+            <span item-start>
+                手机快速注册
+            </span>
+            <span item-end>
+                忘记密码
+            </span>
+         </ion-item>
+   </ion-list>
+
+   <button ion-button block color="danger" class="login_btn" (tap)="doLogin()">登录</button>
+    
 
 </ion-content>
